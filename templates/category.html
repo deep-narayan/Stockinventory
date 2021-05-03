@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="/media/Favicon.jpg" sizes="16x16 32x32" type="image/png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>Business Work- Category</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	color: #999;
+	background: #f3f3f3;
+	font-family: 'Roboto', sans-serif;
+}
+.form-control {
+	border-color: #eee;
+	min-height: 0px auto;
+	box-shadow: none !important;
+}
+.form-control:focus {
+	border-color: #5cd3b4;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.category_list {
+	width: 0px auto;
+	margin: 0 auto;
+	padding: 0px auto;
+}
+.row{
+	height: 50px;
+}
+.category_list h2 {
+	color: #333;
+	margin: 0 0 30px 0;
+	display: inline-block;
+	padding: 0 30px 10px 0;
+	border-bottom: 3px solid #5cd3b4;
+}
+.category_list form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px auto;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.category_list .form-group row {
+	margin-bottom: 20px;
+}
+.category_list label {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+
+.category_list a {
+	color: #5cd3b4;
+	text-decoration: underline;
+}
+.category_list a:hover {
+	text-decoration: none;
+}
+.category_list form a {
+	color: #5cd3b4;
+	text-decoration: none;
+}	
+.category_list form a:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="category_list">
+    <form action="#" method="post" class="form-horizontal">
+        {% csrf_token %}
+      	<div class="row">
+        	<div class="col-12">
+                <h2>Categories</h2>
+               	
+       
+          	
+          
+          <table class="table table-hover" class="form-group row">
+              <tr>
+                  <th>Serial no.</th>
+                  <th>Category Name</th>
+                  <th>Description</th>
+                
+              </tr>
+              {% for i in data %}
+              
+              <tr>
+                  <td>{{forloop.counter}}.</td>
+                  <td>{{i.catname}}</td>
+                  <td>{{i.desc}}</td>
+                 
+
+
+              </tr>
+              
+              {% endfor %}
+		  </table>
+		  
+          <div class="form-group row">
+			<div class="col-8 offset-4">
+				<p><a href="/vendor/businesswork/">Back</a> or <a href="/vendor/addcategory/">Add Category</a></p>
+			</div>  
+		</div> 
+	</div>
+	</div>
+	
+		</div>
+    </form>
+	</div>
+</body>
+</html>

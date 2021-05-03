@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="icon" href="/media/Favicon.jpg" sizes="16x16 32x32" type="image/png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+<title>BBusiness Work- Add Vendor</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+body {
+	color: #999;
+	background: #f3f3f3;
+	font-family: 'Roboto', sans-serif;
+}
+.form-control {
+	border-color: #eee;
+	min-height: 41px;
+	box-shadow: none !important;
+}
+.form-control:focus {
+	border-color: #5cd3b4;
+}
+.form-control, .btn {        
+	border-radius: 3px;
+}
+.vendor-form {
+	width: 500px;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+.vendor-form h2 {
+	color: #333;
+	margin: 0 0 30px 0;
+	display: inline-block;
+	padding: 0 30px 10px 0;
+	border-bottom: 3px solid #5cd3b4;
+}
+.vendor-form form {
+	color: #999;
+	border-radius: 3px;
+	margin-bottom: 15px;
+	background: #fff;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	padding: 30px;
+}
+.vendor-form .form-group row {
+	margin-bottom: 20px;
+}
+.vendor-form label {
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+}
+.vendor-form input[type="checkbox"] {
+	position: relative;
+	top: 1px;
+}
+.vendor-form .btn {        
+	font-size: 16px;
+	font-weight: bold;
+	background: #5cd3b4;
+	border: none;
+	margin-top: 20px;
+	min-width: 140px;
+}
+.vendor-form .btn:hover, .vendor-form .btn:focus {
+	background: #41cba9;
+	outline: none !important;
+}
+.vendor-form a {
+	color: #5cd3b4;
+	text-decoration: underline;
+}
+.vendor-form a:hover {
+	text-decoration: none;
+}
+.vendor-form form a {
+	color: #5cd3b4;
+	text-decoration: none;
+}	
+.vendor-form form a:hover {
+	text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="vendor-form">
+    <form action="#" method="post" class="form-horizontal">
+        {% csrf_token %}
+      	<div class="row">
+        	<div class="col-8 offset-4">
+				<h2>Add Vendor</h2>
+			</div>	
+      	</div>			
+        <div class="form-group row">
+			<label class="col-form-label col-4">Vendor Name</label>
+			<div class="col-8">
+                <input type="text" class="form-control" name="vname" required="required">
+            </div>        	
+        </div>
+        <div class="form-group row">
+			<label class="col-form-label col-4">Vendor's Contact</label>
+			<div class="col-8">
+                <input type="number" class="form-control" name="vcontact" required="required">
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<label class="col-form-label col-4">Vendor's Email</label>
+			<div class="col-8">
+                <input type="email" class="form-control" name="vemail" required="required">
+            </div>        	
+        </div>
+        <div class="form-group row">
+			<label class="col-form-label col-4">Pin Code</label>
+			<div class="col-8">
+                <input type="number" class="form-control" name="vpincode" required="required">
+            </div>        	
+        </div>
+        <div class="form-group row">
+			<label class="col-form-label col-4">Vendor's Addres</label>
+			<div class="col-8">
+                <input type="text" class="form-control" name="vaddress" required="required">
+            </div>        	
+        </div>
+        
+		<div class="form-group row">
+			<label class="col-form-label col-4">Vendor's Company</label>
+			<div class="col-8">
+                <input type="text" class="form-control" name="vcompany" required="required">
+            </div>        	
+        </div>
+        
+	
+		<div class="form-group row">
+			<div class="col-8 offset-4">
+				<button type="submit" value="save" class="btn btn-primary btn-lg">Save</button>
+			</div>  
+        </div>	
+
+        
+        <div class="form-group row">
+			<div class="col-8 offset-4">
+				<p>or <a href="/vendor/businesswork/">Back</a> or <a href="/vendor/view-vendors/">View Vendors</a></p>
+			</div>  
+		</div>	      
+    </form>
+	
+</body>
+</html>
